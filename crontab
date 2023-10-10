@@ -21,4 +21,4 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 52 6    1 * *   root    test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )
 #
 
-* * * * *       root    /usr/bin/find /home/sftp/upload -type f -mmin +10 -exec /root/upload.sh {} \;
+* * * * */10       root    /usr/bin/find /home/sftp/upload -type f -mmin +10 -exec /root/upload.sh {} \;
